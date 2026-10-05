@@ -1,0 +1,8 @@
+{
+  "name": "market-board",
+  "version": "1.0.0",
+  "description": "Live stock dashboard (US, ASX, indices) that refreshes every minute",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
