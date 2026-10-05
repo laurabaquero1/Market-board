@@ -71,7 +71,8 @@ const server = http.createServer(async (req, res) => {
       res.writeHead(200, { "Content-Type": "application/json", "Cache-Control": "no-store" });
       return res.end(JSON.stringify(data));
     }
-    const file = path.join(__dirname, "public", "index.html");
+    let file = path.join(__dirname, "public", "index.html");
+    if (!fs.existsSync(file)) file = path.join(__dirname, "index.html");
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end(fs.readFileSync(file));
   } catch (e) {
